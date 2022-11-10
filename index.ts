@@ -37,8 +37,8 @@ let employees: Array<Employee> = [];
 const readlineSync = require('readline-sync');
 setMode(readlineSync.question('Please select ListAll mode or List [Name] mode '));
 
-// parseCsvAndOutput(goodFile);
-parseCsvAndOutput(badFile);
+parseCsvAndOutput(goodFile);
+// parseCsvAndOutput(badFile);
 
 
 function parseCsvAndOutput(fileName : string)

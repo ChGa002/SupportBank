@@ -18,8 +18,8 @@ export class Employee {
         return Math.round(balance);
     }
 
-    addTransaction(amount: number, date?: any, narrative?: string, from?: string) {
-        let newTransaction = new Transaction(amount, date, narrative, from);
+    addTransaction(amount: number, date?: any, narrative?: string) {
+        let newTransaction = new Transaction(amount, date, narrative);
         this.transactions.push(newTransaction);
     }
 
@@ -34,13 +34,6 @@ export class Employee {
         } else {
             info += " is all settled up.";
         }
-
-        return info;
-    }
-
-    getFullInformation(): string {
-        let info: string = this.name;
-
 
         return info;
     }

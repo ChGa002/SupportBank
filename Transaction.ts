@@ -5,15 +5,13 @@ export class Transaction {
     amount: number;
     date?: Moment;
     narrative?: string;
-    from?: string; // to remove
 
 
-    constructor(amount: number, date?: Moment, narrative?: string, from?: string) {
-        this.validate(amount, date, narrative, from);
+    constructor(amount: number, date?: Moment, narrative?: string) {
+        this.validate(amount, date);
         this.amount = amount;
         this.date = date;
         this.narrative = narrative;
-        this.from = from;
     }
 
     getTransactionInfo()
@@ -29,7 +27,7 @@ export class Transaction {
         return info + " for " + this.narrative;
     }
 
-    private validate(amount: number, date?: Moment, narrative?: string, from?: string)
+    private validate(amount: number, date?: Moment)
     {
         if (isNaN(Number(amount)))
         {
